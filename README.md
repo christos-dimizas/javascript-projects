@@ -1,3 +1,3 @@
 # javascript-projects
 
-Create a web app that represents various APIs results. just for fun.
+Fetch RSS news from IN.GR using the google feed api.
