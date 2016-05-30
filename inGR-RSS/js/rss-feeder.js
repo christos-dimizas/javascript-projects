@@ -31,7 +31,8 @@ function parceGreekNews(result){
         var thefeeds=result.feed.entries;
         for (var i=0; i<thefeeds.length; i++) {
             var date = new Date(thefeeds[i].publishedDate);
-            date = date.getUTCHours() + ":" + (date.getMinutes()<10?'0':'') + date.getMinutes() + " - " + date.getUTCDay() + " " + months[date.getUTCMonth()] + " " + date.getUTCFullYear();
+            //console.log(date.getUTCDate());
+            date = date.getUTCHours() + ":" + (date.getMinutes()<10?'0':'') + date.getMinutes() + " - " + date.getUTCDate() + " " + months[date.getUTCMonth()] + " " + date.getUTCFullYear();
             rssoutput += "<li>" +
                                 "<a href='" + thefeeds[i].link + "'>" + thefeeds[i].title + "</a>" +
                                 "</br>" +
@@ -51,7 +52,7 @@ function parceGeneralNews(result){
         var thefeeds=result.feed.entries;
         for (var i=0; i<thefeeds.length; i++) {
             var date = new Date(thefeeds[i].publishedDate);
-            date = date.getUTCHours() + ":" + (date.getMinutes()<10?'0':'') + date.getMinutes() + " - " + date.getUTCDay() + " " + months[date.getUTCMonth()] + " " + date.getUTCFullYear();
+            date = date.getUTCHours() + ":" + (date.getMinutes()<10?'0':'') + date.getMinutes() + " - " + date.getUTCDate() + " " + months[date.getUTCMonth()] + " " + date.getUTCFullYear();
             rssoutput += "<li>" +
             "<a href='" + thefeeds[i].link + "'>" + thefeeds[i].title + "</a>" +
             "</br>" +
@@ -71,7 +72,7 @@ function parceWorldNews(result){
         var thefeeds=result.feed.entries;
         for (var i=0; i<thefeeds.length; i++) {
             var date = new Date(thefeeds[i].publishedDate);
-            date = date.getUTCHours() + ":" + date.getUTCMinutes() + " - " + date.getUTCDay() + " " + months[date.getUTCMonth()] + " " + date.getUTCFullYear();
+            date = date.getUTCHours() + ":" + date.getUTCMinutes() + " - " + date.getUTCDate() + " " + months[date.getUTCMonth()] + " " + date.getUTCFullYear();
             rssoutput += "<li>" +
             "<a href='" + thefeeds[i].link + "'>" + thefeeds[i].title + "</a>" +
             "</br>" +
@@ -91,7 +92,7 @@ function parceScienceNews(result){
         var thefeeds=result.feed.entries;
         for (var i=0; i<thefeeds.length; i++) {
             var date = new Date(thefeeds[i].publishedDate);
-            date = date.getUTCHours() + ":" + (date.getMinutes()<10?'0':'') + date.getMinutes() + " - " + date.getUTCDay() + " " + months[date.getUTCMonth()] + " " + date.getUTCFullYear();
+            date = date.getUTCHours() + ":" + (date.getMinutes()<10?'0':'') + date.getMinutes() + " - " + date.getUTCDate() + " " + months[date.getUTCMonth()] + " " + date.getUTCFullYear();
             rssoutput += "<li>" +
             "<a href='" + thefeeds[i].link + "'>" + thefeeds[i].title + "</a>" +
             "</br>" +
@@ -111,7 +112,7 @@ function parceEconomyNews(result){
         var thefeeds=result.feed.entries;
         for (var i=0; i<thefeeds.length; i++) {
             var date = new Date(thefeeds[i].publishedDate);
-            date = date.getUTCHours() + ":" + (date.getMinutes()<10?'0':'') + date.getMinutes() + " - " + date.getUTCDay() + " " + months[date.getUTCMonth()] + " " + date.getUTCFullYear();
+            date = date.getUTCHours() + ":" + (date.getMinutes()<10?'0':'') + date.getMinutes() + " - " + date.getUTCDate() + " " + months[date.getUTCMonth()] + " " + date.getUTCFullYear();
             rssoutput += "<li>" +
             "<a href='" + thefeeds[i].link + "'>" + thefeeds[i].title + "</a>" +
             "</br>" +
